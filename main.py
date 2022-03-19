@@ -9,7 +9,7 @@ from skimage import measure
 path = "data/RednBlue/Axial/Label"
 gen_labels(path)
 
-#change
+# change
 
 data_gen_args = dict(rotation_range=0.2,
                     width_shift_range=0.05,
