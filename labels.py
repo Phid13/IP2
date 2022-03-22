@@ -51,6 +51,7 @@ def gen_images(path,target_size = (256,256),flag_multi_class=False):
 
 
 def labels(img):
+    img = img[1,:,:,:,1]
     fig, ax = plt.subplots()
     ax.imshow(img)
     ax.axis('image')
