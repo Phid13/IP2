@@ -35,7 +35,7 @@ def gen_labels(path):
     save(new)
 
 def gen_images(path,target_size = (256,256),flag_multi_class=False):
-    images = np.array([])
+    images = np.array()
     num_image = (len(os.listdir(path)))
     for i in range(num_image):
         x = input(num_image)
@@ -45,7 +45,6 @@ def gen_images(path,target_size = (256,256),flag_multi_class=False):
         img = np.reshape(img,img.shape+(1,)) if (not flag_multi_class) else img
         img = np.reshape(img,(1,)+img.shape)
         np.append(images, img)
-        x = input(img)
         x = input(images)
         # yield img
     return images
