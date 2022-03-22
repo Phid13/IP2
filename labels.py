@@ -16,7 +16,7 @@ def gen_labels(path):
     x = input()
 
     path = "data/RednBlue/Axial/Label"
-    outpath = "data/RednBlue/Test Results/test"
+    outpath = "test"
 
 
     img = io.imread(os.path.join(path, file_name))
