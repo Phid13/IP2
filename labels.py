@@ -6,7 +6,9 @@ import numpy as np
 
 def gen_labels(path):
     images = gen_images(path)
-    x = input(len(images))
+    x = input(np.shape(images))
+    img = images[150,0,:,:,:,0]
+
 
     path = "data/RednBlue/Axial/Label"
     outpath = "test"
@@ -47,7 +49,6 @@ def gen_images(path,target_size = (256,256),flag_multi_class=False):
         images.append(img)
         # yield img
     images = np.array(images)
-    x = input(images)
     return images
 
 
