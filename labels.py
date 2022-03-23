@@ -8,6 +8,7 @@ def gen_labels(path):
     images = gen_images(path)
     x = input(np.shape(images))
     img = images[150,0,:,:,:,0]
+    labels(img)
 
 
     path = "data/RednBlue/Axial/Label"
@@ -62,6 +63,7 @@ def labels(img):
     ax.set_yticks([])
     # plt.savefig("data/RednBlue/Test Results/test")
     plt.savefig("test1")
+    x = input("saved")
 
 
 
