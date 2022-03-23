@@ -38,7 +38,6 @@ def gen_images(path,target_size = (256,256),flag_multi_class=False):
     images = []
     num_image = (len(os.listdir(path)))
     for i in range(num_image):
-        x = input(num_image)
         file_name = os.listdir(path)[i]
         img = io.imread(os.path.join(path, file_name))
         img = trans.resize(img,target_size)
