@@ -44,8 +44,7 @@ def gen_images(path,target_size = (256,256),flag_multi_class=False):
         img = trans.resize(img,target_size)
         img = np.reshape(img,img.shape+(1,)) if (not flag_multi_class) else img
         img = np.reshape(img,(1,)+img.shape)
-        np.append(images, img, axis=4)
-        x = input(img.tolist)
+        x = input(img.asarray())
         x = input(images)
         # yield img
     return images
