@@ -25,8 +25,6 @@ def gen_labels(path):
                     new[i,j,2] = 255
                 
 
-    x = input()
-    x = input(np.where(img))
     iy , ix, _ = np.where((img[0] > 130 & img[1] < 90 & img[2] < 90))
     new[iy,ix] = (255,0,0)
     # iy , ix, _ = np.where(img[0] < 90, img[1] < 90, img[2] > 130)
