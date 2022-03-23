@@ -25,8 +25,8 @@ def gen_labels(path):
                     new[i,j,2] = 255
                 
 
-    x,y,z = img[:,:,0],img[:,:,1],img[:,:,2]
-    iy , ix, _ = np.where(np.logical_and(np.logical_and(x == 255, y == 0), z == 0))
+    red = [255,0,0]
+    iy , ix, _ = np.where(img == red)
     new[iy,ix] = (255,0,0)
     # iy , ix, _ = np.where(img[0] < 90, img[1] < 90, img[2] > 130)
     # new = np.zeros((img.shape))
