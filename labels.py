@@ -6,16 +6,14 @@ import numpy as np
 
 def gen_labels(path):
     images = gen_images(path)
-    x = input(np.shape(images))
     img = images[150,0,:,:,:,0]
-    labels(img)
 
 
-    path = "data/RednBlue/Axial/Label"
-    outpath = "test"
+    # path = "data/RednBlue/Axial/Label"
+    # outpath = "test"
 
 
-    img = io.imread(os.path.join(path, file_name))
+    # img = io.imread(os.path.join(path, file_name))
     # iy , ix, _ = np.where(img == (255, 0, 0) )
     new = np.zeros((img.shape))
     for i in range(0, img.shape[0]):
@@ -35,7 +33,7 @@ def gen_labels(path):
     # new = np.zeros((img.shape))
     # new[iy,ix] = (0,255,0)
 
-    save(new)
+    labels(new)
 
 def gen_images(path,target_size = (256,256),flag_multi_class=False):
     images = []
